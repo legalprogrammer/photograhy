@@ -1,0 +1,207 @@
+// Import font
+@font-face {
+  font-family: "Cremona";
+  src: url("../fonts/Cremona-400.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+// Variables
+$black: #000000;
+$yellow: white;
+$bg: #171717;
+$btncolor: #fdf2f2;
+$h6h5: #929292;
+$h2h1: #f4f5f7;
+$decor: #252525;
+
+// Base styles
+
+html {
+  font-size: 62.5%;
+  overflow-x:hidden;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: $bg;
+  header{
+  padding: 10px 100px;
+  z-index: 10;
+  position: fixed;
+  top: 0%;
+  left: 10%;
+  @media (min-width: 1920px) {
+    left: 15%;
+   }
+  @media (max-width: 600px) {
+    left: 0%;
+    text-align: center;
+    #none{
+      display: none;
+    }
+   }
+   li{
+    list-style-type: none;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    a{
+      text-decoration: none;
+      color: $h2h1;
+      text-decoration: none;
+      &:hover{
+         color: red;
+      }
+    }
+   }
+
+  }
+  .hero-section{
+    margin-top: 17rem;
+    z-index: 4;
+    @media (min-width: 1920px) {
+      margin-top: 20rem; 
+    }
+    @media (max-width: 600px) {
+      .text{
+        text-align: center;
+      }
+     }
+    .text{
+     h2{
+      font-size: 5.3rem;
+      text-transform: lowercase;
+      color: $h2h1;
+      @media (max-width: 600px) {
+      font-size: 3.3rem;
+      font-weight: 500;
+       }
+     }
+     h6{
+      font-size: 1.6rem;
+      text-transform: capitalize;
+      color: $h6h5;
+      @media (max-width: 600px) {
+        font-size: 2rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.7px;
+      }
+     }
+     .btn{
+       padding: 10px;
+       background-color: $btncolor;
+       margin-top: 4rem;
+       font-size: 1.3rem;
+       font-weight: 600;
+       letter-spacing: 0.5px;
+       @media (max-width: 600px) {
+        padding: 10px;
+        background-color: $btncolor;
+        margin-top: 4rem;
+        font-size: 1.3rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+     }
+    .autoplay{
+      transform: scale(3);
+      margin-left: 20rem;
+      padding-top: 50px;
+      @media (min-width: 1920px) {
+            transform: scale(2.9);
+            margin-left: 20rem;
+            padding-top: 80px;
+      }
+      @media (max-width: 600px) {
+        transform: scale(1);
+        margin-left: 0rem;
+        padding-top: 180px;
+      }
+      img{
+      width: 90%;
+      margin-top: 0px;
+      margin-left: -10px;
+      @media (max-width: 600px) {
+
+      }
+      }
+   }
+    }
+    .decor{
+      background-color: $decor;
+      width: 62rem;
+      height: 70rem;
+      position:relative;
+      margin-top: -555px;
+      margin-left: 64rem;
+      z-index: -1;
+      @media (min-width: 1920px) {
+        width: 89rem;
+        height: 77rem;
+        margin-top: -605px;
+        margin-left: 67rem;
+     }
+     @media (max-width: 600px) {
+      width: 22rem;
+      height: 35rem;
+      position:relative;
+      margin-top: -155px;
+      margin-left: 0rem;
+      z-index: -1;
+    }
+    }
+  }
+}
+
+
+// Preloader styles
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+
+  background: $black;
+
+  &__loader {
+    background: $yellow;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 0%;
+  }
+}
+
+.counter {
+  display: inline-block;
+  color: white;
+  position: absolute;
+  bottom: 3rem;
+  right: 4rem;
+  font-size: 7rem;
+  z-index: 1;
+  text-align: right;
+
+  @media (min-width: 76.8rem) {
+    bottom: 6rem;
+    right: 13.2rem;
+    font-size: 12rem;
+  }
+}
+
+// Gallery styles
+.gallery {
+  &__image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+}

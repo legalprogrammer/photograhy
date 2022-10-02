@@ -1,0 +1,17 @@
+{
+  "name": "xy-photos",
+  "version": "1.0.0",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.7.0",
+    "parcel": "^2.7.0"
+  },
+  "dependencies": {
+    "gsap": "^3.11.1"
+  }
+}
